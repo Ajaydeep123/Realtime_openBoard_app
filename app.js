@@ -6,9 +6,7 @@ const {PORT} = process.env;
 const app = express(); //Initiliazed and server ready
 
 app.use(express.static("public"));
-app.use(cors({
-  origin: "http://localhost:3000"
-}));
+app.use(cors());
 let port = process.env.PORT || 5000;
 //port
 let server = app.listen(port, () => {
